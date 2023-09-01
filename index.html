@@ -11,26 +11,7 @@
 
   <!--==================== UNICONS ====================-->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-
-  <!-- ====================PWA================== -->
-  <link rel="manifest" href="manifest.json" />
-  <!-- ios support -->
-  <link rel="apple-touch-icon" href="assets/img/PwaImages/ios/32.png" />
-  <link rel="apple-touch-icon" href="assets/img/PwaImages/ios/72.png" />
-  <link rel="apple-touch-icon" href="assets/img/PwaImages/ios/100.png" />
-  <link rel="apple-touch-icon" href="assets/img/PwaImages/ios/128.png" />
-  <link rel="apple-touch-icon" href="assets/img/PwaImages/ios/144.png" />
-  <link rel="apple-touch-icon" href="assets/img/PwaImages/ios/152.png" />
-  <link rel="apple-touch-icon" href="assets/img/PwaImages/ios/192.png" />
-  <link rel="apple-touch-icon" href="assets/img/PwaImages/ios/256.png" />
-  <link rel="apple-touch-icon" href="assets/img/PwaImages/ios/512.png" />
-  <meta name="apple-mobile-web-app-status-bar" content="#5779E0" />
-  <!-- For Firefox and Firefox for Android -->
-  <meta name="msapplication-navbutton-color" content="#5779E0">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#5779E0">
-  <!-- For Chrome, Opera, and Safari -->
-  <meta name="theme-color" content="#5779E0">
-
+  
   <!-- ============FAVICONS============== -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets//img/favicons/favicon-32x32.png" />
@@ -53,39 +34,6 @@
 
 
 <body>
-
-  <!-- ===================== LOADER ==================== -->
-  <div id="loading" class="loading">
-    <div class="loader">
-      <img src="assets/img/emmanpbarrameda-logo-1x1-white_transparent.png" alt="Loading Image">
-      <div class="bar">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <p class="loading__description">Welcome! Just a moment . . .</p>
-    </div>
-    <p class="loading__copyright">Copyright © <span current-year></span> emmanpbarrameda<br>All rights reserved.</p>
-  </div>
-
-  <!-- Function to update the loading__description -->
-  <script>
-    function updateLoadingText() {
-      const loadingDescription = document.querySelector(".loading__description");
-      if (loadingDescription.textContent === "Welcome! Just a moment . . .") {
-        loadingDescription.textContent = "Getting things ready for you . . .";
-      } else {
-        loadingDescription.textContent = "Welcome! Just a moment . . .";
-      }
-    }
-  
-    // Call the updateLoadingText function every 3 seconds
-    setInterval(updateLoadingText, 3000);
-  </script>  
-
-
 
   <!-- ===================== CIRCLE BG ANIMATION LOOP ==================== -->
   <div class="circle_bubble__anim">
@@ -538,16 +486,6 @@
     Array.from(email_Var).forEach(function (linkElement) {
       linkElement.href = 'mailto:emmanuelbarrameda1@gmail.com';
     });
-  </script>
-
-
-
-  <!-- ===================== SHOW/HIDE LOADER ==================== -->
-  <script>
-    window.onload = function () {
-      var loadingElement = document.getElementById("loading"); //<-- LOADING CACHE SPLASH SCREEN
-      loadingElement.style.display = "none";
-    };
   </script>
 
   <!-- =====================REGISTER SERVICE WORKER================ -->
