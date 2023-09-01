@@ -32,8 +32,8 @@
     --mb-2: 2rem;
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
-
 }
+
 
 /* Reset */
 * {
@@ -42,9 +42,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 body {
     background-color: var(--white);
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 a {
@@ -78,6 +84,20 @@ ul {
         /* Adjust the height for phones */
     }
 }
+
+
+#floating-logo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 100px;
+    height: auto;
+    opacity: 0.3;
+    z-index: -100;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
 
 
 /* Nav menu */
@@ -261,6 +281,9 @@ ul {
 }
 
 
+
+/* URSB25 BANNER */
+
 .ursb25 {
     background-image: linear-gradient(to bottom, #00007D, var(--white));
 }
@@ -283,6 +306,7 @@ ul {
 
 
 
+/* DAY CELEBRATION SLIDE */
 
 .slideshow {
     overflow: hidden;
@@ -337,7 +361,7 @@ ul {
 
 
 
-/*==================== FOOTER ====================*/
+/* FOOTER */
 
 .footer {
     padding-top: 2rem;
@@ -388,7 +412,7 @@ ul {
     }
 
     .section {
-        padding: 2rem 10rem 2rem;
+        padding: 2rem 14rem 2rem;
         /* TOP, LEFT&RIGHT, BOTTOM == DESKTOP VIEW */
         background-color: #f6f8fa;
     }
