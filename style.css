@@ -384,6 +384,55 @@ ul {
 }
 
 
+.authors {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.authors_box_main {
+    text-align: center; /* Center text horizontally within the section */
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+    justify-content: center; /* Center boxes horizontally */
+}
+
+.authors_box {
+    background-color: var(--blue);
+    padding: 2rem 1.5rem 2rem 1.5rem; /* TOP, RIGHT, DOWN, LEFT */
+    border-radius: 0.50rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    width: calc(25% - 20px); /* Calculate box width with margin */
+    margin: 15px; /* Adjust margin as needed */
+    text-align: center; /* Center text horizontally within the box */
+    display: flex; /* Use flexbox to center items vertically */
+    flex-direction: column; /* Stack image and name vertically */
+    align-items: center; /* Center items horizontally within the box */
+
+    box-shadow:  5px 5px 0px #000046,
+    -5px -5px 0px #0000b4;
+}
+
+.author_image {
+    height: 100px;
+    margin-bottom: 10px; /* Add some space between image and name */
+}
+
+.author_name {
+    text-align: center; /* Center the text horizontally */
+    color: var(--white);
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .authors_box {
+        width: 50%; /* Full width on mobile */
+        margin: 10px; /* Adjust margin as needed */
+    }
+}
+
+
+
 
 /* FOOTER */
 
