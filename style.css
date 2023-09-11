@@ -44,9 +44,8 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
   
-
 body {
     background-color: var(--white);
     font-family: "Poppins", sans-serif;
@@ -62,26 +61,27 @@ ul {
 }
 
 /* Header */
-.header {
+header {
     background-color: var(--blue);
     box-shadow: 1px 1px 5px 0px var(--grey);
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 
 /* Logo */
 .logo {
+    /* desktop */
     height: 80px;
-    /* Default height for desktop */
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 @media (max-width: 767px) {
+    /* phones */
     .logo {
         height: 50px;
-        /* Adjust the height for phones */
     }
 }
 
@@ -107,7 +107,6 @@ ul {
     position: fixed;
     background-color: var(--blue);
     overflow: hidden;
-
 }
 
 .menu a,
@@ -115,10 +114,14 @@ ul {
     display: block;
     padding: 30px;
     color: var(--white);
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .menu a:hover {
+    /*animation while hovering */
     background-color: var(--yellow);
+    transform: scale(1.08);
+    opacity: 0.9;
 }
 
 .nav {
@@ -126,22 +129,22 @@ ul {
     transition: max-height .5s ease-out;
 }
 
-
-
 /* Sub nav */
 .subnav {
-    position: relative; /* Add this to the parent element */
+    position: relative;
 }
 
-.subnav-content {
+.subnav_content {
     background-color: var(--white);
     width: 100%;
-    z-index: 2;
+    z-index: 100;
     padding: 20px 0;
     display: none;
+    top: 100%;
+    left: 0;
 }
 
-.subnav-content a {
+.subnav_content a {
     color: var(--black);
     text-decoration: none;
     padding: 30px;
@@ -149,7 +152,7 @@ ul {
     text-align: center;
 }
 
-.subnav:hover .subnav-content {
+.subnav:hover .subnav_content {
     display: block;
 }
 
@@ -160,12 +163,12 @@ ul {
 @media (min-width: 768px) {
 
     /* Sub nav */
-    .subnav-content {
+    .subnav_content {
         padding: 20px 0;
         background-color: var(--blue);
     }
 
-    .subnav-content a {
+    .subnav_content a {
         color: white;
     }
 }
@@ -236,6 +239,7 @@ ul {
 }
 
 
+
 /* SECTION */
 .section {
     padding: 2rem 2rem 2rem;
@@ -260,6 +264,21 @@ ul {
 
 .section_p {
     text-align: center;
+}
+
+
+.section_main_div {
+    padding: 25px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.section_main_div:hover {
+    /*animation while hovering */
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 
@@ -384,6 +403,8 @@ ul {
 }
 
 
+/* AUTHORS */
+
 .authors {
     justify-content: center;
     align-items: center;
@@ -391,10 +412,10 @@ ul {
 
 
 .authors_box_main {
-    text-align: center; /* Center text horizontally within the section */
+    text-align: center;
     display: flex;
-    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
-    justify-content: center; /* Center boxes horizontally */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .authors_box {
@@ -402,32 +423,37 @@ ul {
     padding: 2rem 1.5rem 2rem 1.5rem; /* TOP, RIGHT, DOWN, LEFT */
     border-radius: 0.50rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    width: calc(25% - 20px); /* Calculate box width with margin */
-    margin: 15px; /* Adjust margin as needed */
-    text-align: center; /* Center text horizontally within the box */
-    display: flex; /* Use flexbox to center items vertically */
-    flex-direction: column; /* Stack image and name vertically */
-    align-items: center; /* Center items horizontally within the box */
+    width: calc(25% - 20px);
+    margin: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    box-shadow:  5px 5px 0px #000046,
-    -5px -5px 0px #0000b4;
+    box-shadow:  5px 5px 0px #000046, -5px -5px 0px #0000b4;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.authors_box:hover {
+    /*animation while hovering */
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 .author_image {
     height: 100px;
-    margin-bottom: 10px; /* Add some space between image and name */
+    margin-bottom: 10px;
 }
 
 .author_name {
-    text-align: center; /* Center the text horizontally */
+    text-align: center;
     color: var(--white);
 }
 
-/* Media query for mobile screens */
+/* mobile */
 @media (max-width: 768px) {
     .authors_box {
-        width: 50%; /* Full width on mobile */
-        margin: 10px; /* Adjust margin as needed */
+        width: 50%;
+        margin: 10px;
     }
 }
 
@@ -436,26 +462,63 @@ ul {
 
 /* FOOTER */
 
-.footer {
+footer {
     padding-top: 2rem;
-  }
-  
-  .footer__container {
+    z-index: 100;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     row-gap: 3.5rem;
-  }
-  
-  .footer__bg {
+}
+
+.footer__bg {
     background-color: var(--black);
-    padding: 2rem 0 2rem;
-  }
-  
-  
-  .footer__copy {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo img {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.footer__nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+/* spacing  nav links */
+.footer__nav li {
+    margin-right: 20px; 
+}
+
+.footer__nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: var(--smaller-font-size);
+    transition: transform 0.3s, opacity 0.3s;
+}
+.footer__nav a:hover {
+    /*animation while hovering */
+    color: var(--yellow);
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+
+.footer__copy {
     font-size: var(--smaller-font-size);
     text-align: center;
     color: #fff;
     margin-top: var(--mb-0-5);
-  }
+}
+
 
 
 
