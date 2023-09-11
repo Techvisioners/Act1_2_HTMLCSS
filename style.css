@@ -35,7 +35,7 @@
 }
 
 
-/* Reset */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@
 html {
     scroll-behavior: smooth;
 }
-  
+
 body {
     background-color: var(--white);
     font-family: "Poppins", sans-serif;
@@ -60,7 +60,9 @@ ul {
     list-style: none;
 }
 
-/* Header */
+
+
+/* HEADER */
 header {
     background-color: var(--blue);
     box-shadow: 1px 1px 5px 0px var(--grey);
@@ -70,23 +72,25 @@ header {
     z-index: 100;
 }
 
-/* Logo */
+
+
+/* LOGO */
 .logo {
-    /* desktop */
+    /* DESKTOP */
     height: 80px;
     display: inline-block;
     margin-left: 20px;
 }
 
 @media (max-width: 767px) {
-    /* phones */
+
+    /* mobile */
     .logo {
         height: 50px;
     }
 }
 
-
-#floating-logo {
+#floating_logo_id {
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -100,7 +104,7 @@ header {
 
 
 
-/* Nav menu */
+/* NAV MENU */
 .nav {
     width: 100%;
     height: 100%;
@@ -118,7 +122,7 @@ header {
 }
 
 .menu a:hover {
-    /*animation while hovering */
+    /*ANIMATION WHILE HOVERING */
     background-color: var(--yellow);
     transform: scale(1.08);
     opacity: 0.9;
@@ -129,7 +133,7 @@ header {
     transition: max-height .5s ease-out;
 }
 
-/* Sub nav */
+/* SUB NAV */
 .subnav {
     position: relative;
 }
@@ -161,13 +165,11 @@ header {
 }
 
 @media (min-width: 768px) {
-
-    /* Sub nav */
+    /* SUB NAV */
     .subnav_content {
         padding: 20px 0;
         background-color: var(--blue);
     }
-
     .subnav_content a {
         color: white;
     }
@@ -175,14 +177,12 @@ header {
 
 
 
-/* Menu Icon */
-
+/* MENU ICON */
 .hamb {
     cursor: pointer;
     float: right;
     padding: 40px 20px;
 }
-
 
 .hamb-line {
     background: var(--white);
@@ -190,7 +190,6 @@ header {
     height: 2px;
     position: relative;
     width: 24px;
-
 }
 
 .hamb-line::before,
@@ -212,13 +211,11 @@ header {
     top: -5px;
 }
 
-
 .side-menu {
     display: none;
 }
 
-/* Toggle menu icon */
-
+/* TOGGLE MENU ICON */
 .side-menu:checked~nav {
     max-height: 100%;
 }
@@ -266,7 +263,6 @@ header {
     text-align: center;
 }
 
-
 .section_main_div {
     padding: 25px;
     background: #fff;
@@ -276,7 +272,7 @@ header {
 }
 
 .section_main_div:hover {
-    /*animation while hovering */
+    /*ANIMATION WHILE HOVERING */
     transform: scale(1.05);
     opacity: 0.9;
 }
@@ -302,7 +298,6 @@ header {
 
 
 /* URSB25 BANNER */
-
 .ursb25 {
     background-image: linear-gradient(to bottom, #00007D, var(--white));
 }
@@ -325,8 +320,8 @@ header {
 
 
 
-/* DAY CELEBRATION SLIDE */
 
+/* DAY CELEBRATION SLIDE */
 .slideshow {
     overflow: hidden;
     height: 420px;
@@ -334,10 +329,8 @@ header {
     margin: 0 auto;
 }
 
-
 .slide_wrapper {
-    width: 2184px;
-    /* Adjust based on the total width of your images */
+    width: 2912px;
     animation: slide 18s ease infinite;
 }
 
@@ -360,7 +353,7 @@ header {
     position: relative;
 }
 
-/* Media query for mobile devices with a maximum width of 768px */
+/* MOBILE */
 @media (max-width: 768px) {
     .slideshow {
         width: 100%;
@@ -373,7 +366,22 @@ header {
         height: auto;
         object-fit: contain;
     }
+}
 
+.slide:nth-child(1) {
+    background: var(--blue);
+}
+
+.slide:nth-child(2) {
+    background: var(--blue);
+}
+
+.slide:nth-child(3) {
+    background: var(--blue);
+}
+
+.slide:nth-child(4) {
+    background: var(--blue);
 }
 
 @-webkit-keyframes slide {
@@ -398,18 +406,22 @@ header {
     }
 
     80% {
-        margin-left: -1584px;
+        margin-left: -2184px;
+    }
+
+    90% {
+        margin-left: -2184px;
     }
 }
 
 
-/* AUTHORS */
 
+
+/* AUTHORS */
 .authors {
     justify-content: center;
     align-items: center;
 }
-
 
 .authors_box_main {
     text-align: center;
@@ -420,7 +432,8 @@ header {
 
 .authors_box {
     background-color: var(--blue);
-    padding: 2rem 1.5rem 2rem 1.5rem; /* TOP, RIGHT, DOWN, LEFT */
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    /* TOP, RIGHT, DOWN, LEFT */
     border-radius: 0.50rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     width: calc(25% - 20px);
@@ -430,11 +443,12 @@ header {
     flex-direction: column;
     align-items: center;
 
-    box-shadow:  5px 5px 0px #000046, -5px -5px 0px #0000b4;
+    box-shadow: 5px 5px 0px #000046, -5px -5px 0px #0000b4;
     transition: transform 0.3s, opacity 0.3s;
 }
+
 .authors_box:hover {
-    /*animation while hovering */
+    /*ANIMATION WHILE HOVERING */
     transform: scale(1.05);
     opacity: 0.9;
 }
@@ -449,7 +463,7 @@ header {
     color: var(--white);
 }
 
-/* mobile */
+/* MOBILE */
 @media (max-width: 768px) {
     .authors_box {
         width: 50%;
@@ -461,20 +475,19 @@ header {
 
 
 /* FOOTER */
-
 footer {
     padding-top: 2rem;
     z-index: 100;
 }
 
-.footer__container {
+.footer_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     row-gap: 3.5rem;
 }
 
-.footer__bg {
+.footer_bg {
     background-color: var(--black);
     padding: 2rem 0;
     display: flex;
@@ -482,37 +495,38 @@ footer {
     align-items: center;
 }
 
-.footer__logo img {
+.footer_logo img {
     width: 60px;
     margin-right: 20px;
 }
 
-.footer__nav ul {
+.footer_nav ul {
     list-style: none;
     padding: 0;
     display: flex;
 }
 
 /* spacing  nav links */
-.footer__nav li {
-    margin-right: 20px; 
+.footer_nav li {
+    margin-right: 20px;
 }
 
-.footer__nav a {
+.footer_nav a {
     text-decoration: none;
     color: #fff;
     font-size: var(--smaller-font-size);
     transition: transform 0.3s, opacity 0.3s;
 }
-.footer__nav a:hover {
-    /*animation while hovering */
+
+.footer_nav a:hover {
+    /*ANIMATION WHILE HOVERING */
     color: var(--yellow);
     transform: scale(1.08);
     opacity: 0.9;
 }
 
 
-.footer__copy {
+.footer_copy {
     font-size: var(--smaller-font-size);
     text-align: center;
     color: #fff;
@@ -523,7 +537,7 @@ footer {
 
 
 
-/* Responsiveness */
+/* RESPONSIVENESS */
 @media (min-width: 768px) {
     .nav {
         max-height: none;
@@ -552,6 +566,4 @@ footer {
         /* TOP, LEFT&RIGHT, BOTTOM == DESKTOP VIEW */
         background-color: #f6f8fa;
     }
-
-
 }
